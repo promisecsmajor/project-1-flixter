@@ -23,7 +23,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="5dp"
         android:layout_toEndOf="@+id/ivPoster"
-        android:textColor="#FFC107"
+        android:textColor="#F44336"
         android:textSize="24sp"
         android:textStyle="bold"
         tools:text="Jurassic Hunt" />
