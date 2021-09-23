@@ -12,12 +12,14 @@ import java.util.List;
 public class Movie {
     private static String backdropImageSize;
     private static String posterImageSize;
+
     String basePath = "http://image.tmdb.org/t/p/";
     String backdropPath;
     String posterPath;
     String title;
     String overview;
     double rating;
+    int movieId;
 
 
 
@@ -32,6 +34,7 @@ public class Movie {
         Movie.posterImageSize = posterImageSize;
         Movie.backdropImageSize = backdropImageSize;
         rating = jsonObject.getDouble("vote_average");
+        movieId = jsonObject.getInt("id");
     }
 
     public static List<Movie> fromJsonArray (JSONArray movieJsonArray, String backdropImageSize, String posterImageSize) throws JSONException {
@@ -59,4 +62,6 @@ public class Movie {
     }
 
     public double getRating() { return rating; }
+
+    public int getMovieId() { return movieId; }
 }
