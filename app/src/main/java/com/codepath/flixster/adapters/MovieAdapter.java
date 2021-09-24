@@ -91,11 +91,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             } else {
                 imageUrl = movie.getPosterPath();
             }
-            int radius = 5;
-            int margin = 5;
+            int radius = 30;
+            int margin = 10;
             GlideApp.with(context)
                     .load(imageUrl)
-                    .centerCrop() // scale image to fill the entire ImageView
+                    .fitCenter() // scale image to fill the entire ImageView
                     .transform(new RoundedCornersTransformation(radius, margin))
                     .into(ivPoster);
 
